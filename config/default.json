@@ -1,0 +1,7 @@
+{
+	"port": 5000,
+	"mongoUri": "mongodb+srv://Ossikde:GachiMuchi@cluster0.yyyvj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+	"accessJWT": "super good vibes",
+	"refreshJWT": "super super good vibes",
+	"baseUrl": "http://localhost:5000"
+}

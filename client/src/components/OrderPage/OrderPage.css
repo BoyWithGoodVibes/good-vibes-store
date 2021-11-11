@@ -1,0 +1,14 @@
+.order-container {
+	width: 80%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	column-gap: 20px;
+	border: 2px solid #ccc;
+}
+
+@media (max-width: 1100px) {
+	.order-container {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

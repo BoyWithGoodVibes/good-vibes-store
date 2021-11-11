@@ -1,0 +1,30 @@
+.product-button {
+	display: block;
+	padding: 7px;
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	font-weight: 600;
+	transition: .25s ease-in-out;
+}
+
+.in-cart {
+	background: black;
+	color: white;
+}
+
+.in-cart:hover {
+	background: inherit;
+	color: black;
+}
+
+.not-in-cart {
+	background: inherit;
+	color: black;
+}
+
+.not-in-cart:hover {
+	background: black;
+	color: white;
+}

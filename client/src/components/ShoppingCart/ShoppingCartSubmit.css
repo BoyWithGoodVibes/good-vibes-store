@@ -1,0 +1,42 @@
+.cart-submit {
+	box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.3);
+	align-self: start;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.cart-submit-subtotal {
+	margin-bottom: 5px;
+}
+
+.cart-submit-subtotal-number {
+	text-align: center;
+	margin-bottom: 7px;
+	font-weight: 600;
+}
+
+.cart-submit-submit-order {
+	display: block;
+	width: 100%;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	padding: 5px 7px;
+	white-space: nowrap;
+}
+
+.cart-submit-submit-order:hover {
+	color: #fff;
+}
+
+@media (max-width: 1320px) {
+	.cart-submit {
+		justify-self: end;
+	}
+}
+
+@media (max-width: 500px) {
+	.cart-submit {
+		width: 100%;
+	}
+}

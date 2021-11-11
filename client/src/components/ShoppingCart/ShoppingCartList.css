@@ -1,0 +1,11 @@
+.cart-products-list {
+	box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.3);
+	margin-right: 20px;
+}
+
+@media (max-width: 1320px) {
+	.cart-products-list {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}

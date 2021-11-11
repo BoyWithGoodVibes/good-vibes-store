@@ -1,0 +1,89 @@
+.nav-container {
+	position: sticky;
+	z-index: 4;
+	top: 0;
+	background-color: #000;
+	font-size: 22px;
+	margin-bottom: 20px;
+	padding-top: 40px;
+	border-bottom: 2px solid #000;
+}
+
+.nav-list {
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	position: relative;
+}
+
+.nav-center {
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.nav-end {
+	margin-right: 0;
+	margin-left: auto;
+	display: inline-flex;
+}
+
+.nav-list-item,
+.nav-list-item button {
+	display: inline-block;
+	cursor: pointer;
+	color: #fff ;
+	transition: color .15s ease-in-out;
+	outline: none;
+	border: none;
+	background: none;
+}
+
+.nav-list-item:hover,
+.nav-list-item button:hover {
+	color: rgb(150, 150, 150);
+}
+
+.nav-list-separator {
+	color: #fff;
+}
+ 
+.nav-dropdown {
+	position: fixed;
+	top: 90px;
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	font-size: 16px;
+}
+
+.nav-dropdown a {
+	color: #fff;
+}
+
+.nav-dropdown a:hover {
+	color: rgb(150, 150, 150);
+}
+
+
+.nav-dropdown-animation-enter {
+	opacity: 0;
+}
+
+.nav-dropdown-animation-enter-active {
+	opacity: 1;
+	transition: .3s;
+}
+
+.nav-dropdown-animation-exit {
+	opacity: 1;
+}
+
+.nav-dropdown-animation-exit-active {
+	opacity: 0;
+	transition: .3s;
+}

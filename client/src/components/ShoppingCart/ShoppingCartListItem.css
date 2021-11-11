@@ -1,0 +1,122 @@
+.cart-products-list-item {
+	display: grid;
+	grid-template-columns: 145px 1fr 115px 130px 18px;
+	align-items: start;
+	/*box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.3);*/
+	border-bottom: 1px solid #ccc;
+	padding: 20px 20px 20px;
+	margin-bottom: 20px;
+}
+
+.cart-products-list-item:last-child {
+	margin-bottom: 0;
+	border-bottom:  none;
+}
+
+.cart-products-list-item-img-container {
+	margin-right: 15px;
+}
+
+.cart-products-list-item-title {
+	padding-right: 20px;
+	max-height: 147px;
+	overflow: hidden;
+	color: #454545;
+}
+
+.cart-products-list-item-title:hover {
+	color: #ccc;
+}
+
+.cart-products-list-item-input {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cart-products-list-item-input .product-input {
+	margin-bottom: 0;
+}
+
+.cart-products-list-item-input > p {
+	font-size: 12px;
+}
+
+.cart-products-list-item-totalprice {
+	padding-top: 7px;
+	margin-left: 15px;
+	font-weight: 600;
+}
+
+.cart-products-list-item-button {
+	border: none;
+	background: none;
+	outline: none;
+	height: fit-content;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+@media (max-width: 740px) {
+	.cart-products-list-item {
+		grid-template-columns: 1fr 3fr max-content;
+	}
+	.cart-products-list-item-title {
+		padding-right: 5px;
+		max-height: 125px;
+	}
+	.cart-products-list-item-input {
+		justify-self: center;
+		margin-right: 10px;
+	}
+	.cart-products-list-item-totalprice {
+		margin-left: auto;
+		margin-right: 0;
+	}
+	.cart-products-list-item-button {
+		grid-column: 3;
+		grid-row: 1;
+	}
+}
+
+@media (max-width: 500px) {
+	.cart-products-list-item {
+		grid-template-columns: 1fr max-content;
+		text-align: center;
+	}
+	.cart-products-list-item-img-container {
+		margin-right: 0;
+		grid-column: 1;
+		margin-bottom: 10px;
+	}
+	.cart-products-list-item-title {
+		grid-column: 1;
+		margin-bottom: 10px;
+	}
+	.cart-products-list-item-input {
+		grid-column: 1;
+		justify-self: end;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	.cart-products-list-item-totalprice {
+		grid-column: 1;
+		justify-self: end;
+		padding-top: 0;
+	}
+	.cart-products-list-item-button {
+		grid-column: 2;
+		grid-row: 1;
+	}
+}
+
+@media (max-width: 400px) {
+	.cart-products-list-item-input {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.cart-products-list-item-totalprice {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

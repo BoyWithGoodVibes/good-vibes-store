@@ -1,0 +1,76 @@
+.sort-container {
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	border-top: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	background-color: #fff;
+	text-align: center;
+}
+
+.sort-button {
+	background: none;
+	border: none;
+	display: block;
+	padding: 18px 45px;
+	border-left: 2px solid #ccc;
+	cursor: pointer;
+	transition: .2s ease-in-out;
+}
+
+.sort-button:hover {
+	background: #ccc;
+}
+
+.sort-dropdown {
+	position: fixed;
+	bottom: 70px;
+	display: grid;
+	grid-template-columns: minmax(0, 135px);
+	padding: 10px;
+	background: #ccc;
+	font-size: 16px;
+	text-align: center;
+}
+
+.sort-dropdown p {
+	padding: 5px 2px;
+	cursor: pointer;
+	transition: .2s ease-in-out;
+}
+
+.sort-dropdown p:hover {
+	background: #fff;
+}
+
+.sort-dropdown-animation-enter {
+	opacity: 0;
+}
+
+.sort-dropdown-animation-enter-active {
+	opacity: 1;
+	transition: .3s;
+}
+
+.sort-dropdown-animation-exit {
+	opacity: 1;
+}
+
+.sort-dropdown-animation-exit-active {
+	opacity: 0;
+	transition: .3s;
+}
+
+@media (max-width: 1025px) {
+	.sort-button {
+		flex-grow: 1;
+	}
+	
+	.sort-dropdown {
+		grid-template-columns: minmax(0, 1fr);
+		width: 100%;
+	}
+}

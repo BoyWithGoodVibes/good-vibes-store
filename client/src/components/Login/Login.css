@@ -1,0 +1,40 @@
+.login-form {
+	z-index: 11;
+	position: fixed;
+	width: 500px;
+	padding: 40px;
+	background: #fff;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -60%);
+}
+
+.login-form-title {
+	font-size: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.login-form-animation-enter {
+	opacity: 0;
+}
+
+.login-form-animation-enter-active {
+	opacity: 1;
+	transition: .3s;
+}
+
+.login-form-animation-exit {
+	opacity: 1;
+}
+
+.login-form-animation-exit-active {
+	opacity: 0;
+	transition: .3s;
+}
+
+@media (max-width: 600px) {
+	.login-form {
+		width: 100%;
+	}
+} 
