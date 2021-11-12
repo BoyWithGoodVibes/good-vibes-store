@@ -5,7 +5,7 @@ export const getData = () => {
 	return async dispatch => {
 		try {
 			dispatch(fetching(true));
-			const { data } = await axios.get('/api/products/');
+			const { data } = await axios.get('https://goodvibesstore.herokuapp.com/api/products/');
 			const categories = [...new Set(data.map(item => item.category))];
 
 			dispatch({

@@ -113,7 +113,7 @@ export const updateQuantityinProduct = (action, product, cart) => {
 		try {
 
 
-			const { data } = await axios.post(`/api/cart/changequantity/${action}`, product, {
+			const { data } = await axios.post(`https://goodvibesstore.herokuapp.com/api/cart/changequantity/${action}`, product, {
 				headers: {
 					'Content-Type': 'application/json',
 					Authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -158,7 +158,7 @@ export const confirmOrder = (formData, products) => {
 	return async dispatch => {
 		try {
 
-			const { data } = await axios.post('api/order/confirm', { formData, products }, {
+			const { data } = await axios.post('https://goodvibesstore.herokuapp.com/api/order/confirm', { formData, products }, {
 				headers: {
 					'Content-Type': 'application/json',
 					Authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -199,7 +199,7 @@ export const removeAll = () => {
 		try {
 
 
-			await axios.post('/api/cart/removeAll', {}, {
+			await axios.post('https://goodvibesstore.herokuapp.com/api/cart/removeAll', {}, {
 				headers: {
 					'Content-Type': 'application/json',
 					Authorization: `Bearer ${localStorage.getItem('accessToken')}`

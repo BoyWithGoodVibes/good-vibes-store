@@ -16,7 +16,7 @@ export const register = (body) => {
 				registerBody = JSON.stringify(body)
 			}
 
-			const { data } = await axios.post('/api/auth/register', registerBody, { headers });
+			const { data } = await axios.post('https://goodvibesstore.herokuapp.com/api/auth/register', registerBody, { headers });
 
 
 			if (data && data.accessToken) {
@@ -45,7 +45,7 @@ export const login = (body) => {
 				body = JSON.stringify(body)
 			}
 
-			const { data } = await axios.post('/api/auth/login', body, { headers });
+			const { data } = await axios.post('https://goodvibesstore.herokuapp.com/api/auth/login', body, { headers });
 
 			if (data && data.accessToken) {
 				dispatch(successLogin(data))
@@ -70,7 +70,7 @@ export const checkAuth = () => {
 
 			dispatch(userLoading(true));
 
-			const { data } = await axios.get('/api/auth/refresh', { withCredentials: true });
+			const { data } = await axios.get('https://goodvibesstore.herokuapp.com/api/auth/refresh', { withCredentials: true });
 			if (data && data.accessToken) {
 				dispatch(successLogin(data))
 			}
@@ -96,7 +96,7 @@ export const logout = () => {
 
 			dispatch(userLoading(true));
 
-			await axios.post('/api/auth/logout');
+			await axios.post('https://goodvibesstore.herokuapp.com/api/auth/logout');
 
 			dispatch({
 				type: LOGOUT

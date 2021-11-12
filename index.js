@@ -11,7 +11,7 @@ app.use(express.json({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
 	credentials: true,
-	origin: 'https://goodvibesstore.herokuapp.com/'
+	origin: 'https://goodvibesstore.herokuapp.com'
 }));
 
 app.use('/api/auth', require('./routes/auth.routes'));
